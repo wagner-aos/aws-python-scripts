@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Stack to test Fast AWS Connections API'
+Parameters:
+  QueueName:
+    Type: String
+  ReceiveMessageWaitTimeSeconds:
+    Type: Number
+  VisibilityTimeout:
+    Type: Number
+  MaximumMessageSize:
+    Type: Number
+  MessageRetentionPeriod:
+    Type: Number
+  DelaySeconds:
+    Type: Number
+Resources:
+  FastAWSConnetionsQueue:
+    Type: "AWS::SQS::Queue"
+    Properties:
+      QueueName: !Ref QueueName
+      MaximumMessageSize: !Ref MaximumMessageSize
+      MessageRetentionPeriod: !Ref MessageRetentionPeriod
+      ReceiveMessageWaitTimeSeconds: !Ref ReceiveMessageWaitTimeSeconds
+      VisibilityTimeout: !Ref VisibilityTimeout
+      DelaySeconds: !Ref DelaySeconds

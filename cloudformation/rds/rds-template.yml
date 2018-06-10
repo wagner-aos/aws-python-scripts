@@ -1,0 +1,37 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'RDS MySQL Instance'
+Parameters:
+  DBName: 
+    Type: String
+  DBInstanceIdentifier:
+    Type: String
+  DBInstanceClass:
+    Type: String   
+  Engine:
+    Type: String
+  EngineVersion:
+    Type: String
+  MasterUsername: 
+    Type: String
+  MasterUserPassword:
+    Type: String
+Resources:
+  FastAWSConnectionsDB:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBName: !Ref DBName
+      DBInstanceIdentifier: !Ref DBInstanceIdentifier
+      DBInstanceClass: !Ref DBInstanceClass
+      Engine: !Ref Engine
+      EngineVersion: !Ref EngineVersion
+      MasterUsername: !Ref MasterUsername
+      MasterUserPassword: !Ref MasterUserPassword
+      AllocatedStorage: 100
+      BackupRetentionPeriod: 1
+      DBSecurityGroups: []
+      PreferredMaintenanceWindow: sat:09:37-sat:10:07
+      MultiAZ: false
+      AutoMinorVersionUpgrade: true
+      PubliclyAccessible: false
+      StorageType: standard
+      StorageEncrypted: false

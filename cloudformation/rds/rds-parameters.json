@@ -1,0 +1,30 @@
+[
+    {
+        "ParameterKey": "DBName",
+        "ParameterValue": "FastAWSConnections"
+    },
+    {
+        "ParameterKey": "DBInstanceIdentifier",
+        "ParameterValue": "fast-aws-connections-test"
+    },
+    {
+        "ParameterKey": "DBInstanceClass",
+        "ParameterValue": "db.t2.micro"
+    },
+    {
+        "ParameterKey": "Engine",
+        "ParameterValue": "mysql"
+    },
+    {
+        "ParameterKey": "EngineVersion",
+        "ParameterValue": "5.6.37"
+    },
+    {
+        "ParameterKey": "MasterUsername",
+        "ParameterValue": "admin"
+    },
+    {
+        "ParameterKey": "MasterUserPassword",
+        "ParameterValue": "28052018"
+    }
+]
